@@ -1,1 +1,15 @@
 # cse415
+This assignment follows up on Assignment 1 by taking the same number-guessing game and putting it into framework of the classical theory of problem solving. When you have completed this assignment, you will be aware of the differences between a problem formulation for the classical theory and a simple game that does not take the theory into account. This will prepare the way to study algorithms for state-space search in Assignment 3.
+
+Procedure
+1. Begin this assignment by reading the 1st chapter of "Applying AI in Problem Solving" (linked from the Readings page).
+
+2. Next, download the starter code for this assignment. Un-tar it using a standard file archiving tool such as tar, WinZip, Windows Compressed Folders, etc.
+3. Examine each of the two problem formulation files provided. One is the Missionaries and Cannibals problem. The other is the Towers of Hanoi problem. Each is in its own folder. Two additional folders are provided, and you will be writing two new problem formulations -- one in each.
+In the given formulation files, pay particular attention to how the State class is defined and how the operators are established. We will be talking about this code in class.
+
+4. An interactive solving client is provided. This is implemented in the file Int_Solv_Client.py. Try running the client with Towers of Hanoi by using the following command in a Linux, Darwin, or Cygwin command shell. To do this, cd into the TowersOfHanoi folder, and then issue the command:
+python3 ../Int_Solv_Client.py TowersOfHanoi 3
+5. As a warmup, create your own problem formulation file for the "Farmer, Fox, Chicken, and Grain" problem covered in class on Jan. 5. Using the interactive solving client, demonstrate the use of your formulation to create a solving-session log. You can simply capture your screen to show the log.
+6. For your main formulation, create your own problem formulation file for a special version of the guess-my-number game, related to the game you implemented for Assignment 1. Here is a description of the new version of the game. Instead of randomly choosing a number, read the number from the command line, and store this in a variable in the COMMON_DATA part of your code. The user, who will be using the interactive solving client, will not be trying to guess the number directly. Instead, the user will be applying operators that correspond to particular (k,m) questions of the original game. Each applicable operator takes the game to a new state, and generally, the new state will be closer to a goal state. Each state will contain a list of numbers that might still be "the answer" meaning they have not been ruled out yet by answers to questions. The goal state is the state containing a singleton set whose sole element is the special number.
+In the original game, the secret number was allowed to be in the range 1 to 1000. In the new problem, we will parameterize this range and you can set it to be small when you are debugging your program and then somewhat larger later. For example, you could start with MAX_NUMBER = 10, and later set MAX_NUMBER = 100, when your program is working well.

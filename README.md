@@ -1,4 +1,4 @@
-# cse415
+# CSE415 Introduction to Artificial Intelligence
 CSE 415: Introduction to Artificial Intelligence
 The University of Washington, winter, 2018
 
